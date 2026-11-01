@@ -1,8 +1,20 @@
-
-
 @use "responsive" as responsive;
+@use "reset" as *;
+
 @use "reset" as reset;
 @use "fonts" as fonts;
+
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height, 80px);
+}
+
+:root {
+  --header-height: 80px;
+}
+
 
 @keyframes clouds {
   from {

@@ -4,8 +4,8 @@ import QuoteSlider from '../islands/QuoteSlider.svelte';
 const { services, call, quotes } = home;
 ---
 
-<a class="scroll-anchor" id="services"></a>
-<div class="services">
+
+<div class="services" id="services">
   <section class="wrapper">
     <article>
       <header>
@@ -28,7 +28,7 @@ const { services, call, quotes } = home;
       ))}
     </div>
 
-    <a class="scroll-anchor" id="contact"></a>
+    
     <div class="services-bottom">
       <a class="call" href={`tel:${call.number}`}>
         <h2>
@@ -42,4 +42,4 @@ const { services, call, quotes } = home;
   </section>
 </div>
 
-<a class="scroll-anchor" id="quote"></a>
+

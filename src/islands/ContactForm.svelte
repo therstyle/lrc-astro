@@ -93,3 +93,9 @@
     <small>{note}</small>
   {/if}
 </form>
+
+<style lang="scss">
+.frm_submit {
+    margin-bottom: var(--space-2);
+  }
+</style>
