@@ -1,0 +1,19 @@
+---
+import home from '../data/home';
+const { hero, cta, site } = home;
+---
+
+<div class="top">
+  <section class="wrapper">
+    <div class="absolute">
+      <img src="/images/latinrogue.svg" class="latinrogue" alt={site.name} />
+    </div>
+
+    <div class="top-content">
+      <h1><small>{hero.headline.small}</small><br />{hero.headline.main}</h1>
+
+      <p>{hero.text}</p>
+      <p><a class="btn" href={cta.href}>{cta.label}</a></p>
+    </div>
+  </section>
+</div>

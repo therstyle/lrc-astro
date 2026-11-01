@@ -1,0 +1,74 @@
+---
+import '../styles/main.scss';
+import home from '../data/home';
+import Header from './Header.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Latin Rogue Cleaning',
+  description = 'Latin Rogue Cleaning — professional home cleaning service. Get a free quote today.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={Astro.url} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={new URL('/images/opengraph.jpg', Astro.url).href} />
+    <meta property="og:url" content={Astro.url} />
+
+    <!-- JSON-LD (ported from AIOSEO) -->
+    <script type="application/ld+json">
+      {JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'Organization',
+            '@id': `${new URL(Astro.url)}#organization`,
+            name: 'Latin Rogue Cleaning Services',
+            url: new URL(Astro.url).origin,
+            telephone: home.site.phone,
+          },
+          {
+            '@type': 'WebPage',
+            '@id': `${new URL(Astro.url)}#webpage`,
+            url: new URL(Astro.url).href,
+            name: title,
+            inLanguage: 'en-US',
+          },
+        ],
+      })}
+    </script>
+  </head>
+  <body id="top" class="front-page">
+    <Header />
+
+    <div class="wrap container" role="document">
+      <div class="content">
+        <main class="main">
+          <slot name="main" />
+        </main>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="dirt">
+        <slot name="footer" />
+      </div>
+    </div>
+  </body>
+</html>

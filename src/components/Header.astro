@@ -1,0 +1,7 @@
+---
+import Nav from '../islands/Nav.svelte';
+import home from '../data/home';
+---
+
+<!-- Hydrates on load so the mobile toggle works immediately at the top of the page. -->
+<Nav client:load items={home.nav} logo={home.site.logo} siteName={home.site.name} />

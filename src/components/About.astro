@@ -1,0 +1,23 @@
+---
+import home from '../data/home';
+const { about } = home;
+---
+
+<a class="scroll-anchor" id="about"></a>
+<div class="about">
+  <section class="wrapper">
+    <div class="about-left">
+      <img src={about.image} alt="Latin Rogue Cleaning" width="256" height="256" fetchpriority="high" />
+    </div>
+
+    <div class="about-right">
+      <article>
+        <header>
+          <h1><small>{about.headline.small}</small><br />{about.headline.main}</h1>
+        </header>
+
+        {about.text.map((paragraph) => <p>{paragraph}</p>)}
+      </article>
+    </div>
+  </section>
+</div>

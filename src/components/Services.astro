@@ -1,0 +1,45 @@
+---
+import home from '../data/home';
+import QuoteSlider from '../islands/QuoteSlider.svelte';
+const { services, call, quotes } = home;
+---
+
+<a class="scroll-anchor" id="services"></a>
+<div class="services">
+  <section class="wrapper">
+    <article>
+      <header>
+        <h1>{services.headline}</h1>
+      </header>
+
+      <p>{services.text}</p>
+    </article>
+
+    <div class="all-services">
+      {services.items.map((service) => (
+        <article class="service" key={service.icon}>
+          <header>
+            <img src={service.icon} alt="" width="64" height="64" loading="lazy" />
+            <h3>{service.headline}</h3>
+          </header>
+
+          <p>{service.text}</p>
+        </article>
+      ))}
+    </div>
+
+    <a class="scroll-anchor" id="contact"></a>
+    <div class="services-bottom">
+      <a class="call" href={`tel:${call.number}`}>
+        <h2>
+          <small>{call.text}</small>
+          {call.number}
+        </h2>
+      </a>
+
+      <QuoteSlider client:load quotes={quotes} />
+    </div>
+  </section>
+</div>
+
+<a class="scroll-anchor" id="quote"></a>

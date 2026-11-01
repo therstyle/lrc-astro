@@ -1,0 +1,19 @@
+---
+import home from '../data/home';
+import ContactForm from '../islands/ContactForm.svelte';
+const { contact, site } = home;
+---
+
+<section class="wrapper">
+  <article class="quote-left">
+    <header>
+      <h1>{contact.headline.main}<br /><small>{contact.headline.small}</small></h1>
+    </header>
+
+    {contact.text.map((paragraph) => <p>{paragraph}</p>)}
+  </article>
+
+  <div class="quote-right">
+    <ContactForm client:load note={contact.note} defaultState={contact.defaultState} phone={site.phone} />
+  </div>
+</section>
