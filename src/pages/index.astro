@@ -1,6 +1,5 @@
 ---
 import Layout from '../components/Layout.astro';
-import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import Services from '../components/Services.astro';
@@ -9,11 +8,14 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
-  <Header slot="main" />
-
   <Hero slot="main" />
-  <About slot="main" />
-  <Services slot="main" />
+
+  <!-- The original wraps the About + Services sections in a `.bottom-grass`
+       container that renders the sky-to-grass gradient transition. -->
+  <div class="bottom-grass" slot="main">
+    <About />
+    <Services />
+  </div>
 
   <Contact slot="footer" />
   <Footer slot="footer" />

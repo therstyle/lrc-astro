@@ -12,15 +12,17 @@
     href: string;
   }
 
+  interface Props {
+    items?: NavItem[];
+    logo?: string;
+    siteName?: string;
+  }
+
   let {
     items = [] as NavItem[],
     logo = '',
     siteName = '',
-  }: {
-    items?: NavItem[];
-    logo?: string;
-    siteName?: string;
-  } = $props();
+  }: Props = $props();
 
   let open = $state(false);
 

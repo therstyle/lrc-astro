@@ -1,0 +1,71 @@
+/**
+ * Refinements layered on top of the verbatim main.scss port.
+ *
+ * main.scss is a minified port of the original theme's compiled CSS, so the
+ * structural styles (grass gradient, flickity dots, etc.) already live there.
+ * These are the small additions needed by the Svelte islands that the original
+ * page never compiled: the form submit-button gradient and the quotes carousel
+ * (consistent height + clickable pagination dots).
+ */
+
+/* --- Contact form submit button -------------------------------------------
+ * The original styled `.quote-right input[type="submit"]` with a warm gradient.
+ * The island renders a <button class="frm_final_submit"> instead, so the same
+ * gradient (plus the surrounding input look it inherited) is re-applied here and
+ * kept visible while disabled, since the demo form is non-functional. */
+.quote-right .frm_final_submit {
+  font-family: arial, sans-serif;
+  font-size: 18px;
+  border: 1px solid #f1b977;
+  border-radius: 20px;
+  padding: 10px;
+  color: #d63900;
+  text-shadow: 1px 1px 0 #f5d19a;
+  text-transform: capitalize;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  /* Same fallback + vendor-prefixed + standard gradient as the original, so it
+   * degrades identically across browsers. */
+  background: #f1b977;
+  background: -moz-linear-gradient(top, rgba(241, 185, 119, 1) 1%, rgba(233, 147, 46, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(241, 185, 119, 1) 1%, rgba(233, 147, 46, 1) 100%);
+  background: linear-gradient(to bottom, rgba(241, 185, 119, 1) 1%, rgba(233, 147, 46, 1) 100%);
+  transition: 0.3s all;
+
+  &:hover:not(:disabled) {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.33);
+  }
+
+  /* The demo form has no backend, so the button is permanently disabled. Keep
+   * the gradient fully visible instead of letting the browser grey it out. */
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 1;
+  }
+}
+
+/* --- Quotes carousel -----------------------------------------------------
+ * Consistent height: every slide shares one grid cell so the container sizes to
+ * the tallest quote instead of stacking or collapsing as quotes crossfade. */
+.quotes .quotes-track {
+  display: grid;
+}
+
+.quotes .quote-slide {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.quotes .quote-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Dots are clickable and keyboard-operable. */
+.quotes .flickity-page-dots .dot:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
+}
