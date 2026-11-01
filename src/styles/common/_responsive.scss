@@ -1,0 +1,320 @@
+@import "variables";
+
+@media only screen and (min-width: 1920px) {
+  body {
+    background-size: contain !important;
+    background-position: 0 -15%;
+  }
+}
+
+@media only screen and (max-width: $lg-tablet) {
+  .call {
+    &::before {
+      position: static;
+      margin-right: var(--space-1);
+    }
+  }
+}
+
+@media only screen and (max-width: $md-tablet) {
+  .wrapper {
+    width: 92%;
+  }
+
+  .top {
+    max-width: $sm-tablet;
+    margin-left: auto;
+    margin-right: auto;
+
+    .wrapper {
+      flex-direction: row;
+    }
+
+    .absolute {
+      position: static;
+    }
+
+    h1 {
+      font-size: 66px;
+      line-height: 0.83;
+
+      small {
+        font-size: 36px;
+        line-height: inherit;
+      }
+    }
+  }
+
+  .services {
+    max-width: $sm-tablet;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .all-services {
+    flex-wrap: wrap;
+
+    > .service:not(:last-child) {
+      margin-bottom: var(--space-2);
+    }
+  }
+
+  .service {
+    width: 100%;
+
+    header {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .services-bottom {
+    flex-wrap: wrap;
+    max-width: 520px;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .call {
+    transform: translateX(-25px);
+    margin-bottom: var(--space-4);
+  }
+}
+
+@media only screen and (max-width: $sm-tablet) {
+  body {
+    padding-top: calc(75px + var(--space-4));
+    background-position-y: -150px;
+  }
+
+  header.main {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    background: var(--baby-blue);
+    position: fixed;
+    top: 0;
+    transition: 0.3s all;
+
+    .wrapper {
+      flex-wrap: wrap;
+      margin: 0;
+      width: 100%;
+    }
+
+    nav {
+      width: 100%;
+      display: none;
+
+      .menu {
+        flex-direction: column;
+        padding-top: var(--space-1);
+        border-top: 1px solid var(--alpha-white);
+        width: 100%;
+
+        li {
+          margin: 0 0 var(--space-1);
+
+          > a {
+            padding: 0 4%;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .scrolled-down {
+    header.main {
+      transform: translateY(-100%);
+    }
+  }
+
+  .menu-open {
+    header.main {
+      nav {
+        display: flex;
+      }
+    }
+  }
+
+  .logo {
+    width: 150px;
+    margin-left: 4%;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .top {
+    min-height: 450px;
+  }
+
+  .latinrogue {
+    transform: none;
+    min-width: 250px;
+  }
+
+  .top-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about {
+    .wrapper {
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 0.83;
+
+      small {
+        font-size: 36px;
+        line-height: inherit;
+      }
+    }
+  }
+
+  .about-left {
+    justify-content: center;
+    margin-right: 0;
+    margin-bottom: var(--space-2);
+  }
+
+  .services {
+    h1 {
+      font-size: 66px;
+    }
+  }
+
+  .bottom {
+    .wrapper {
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 66px;
+      text-align: center;
+      //line-height: .83;
+
+      small {
+        line-height: initial;
+      }
+    }
+  }
+
+  .quote-left {
+    margin-right: 0;
+    margin-bottom: var(--space-2);
+  }
+}
+
+@media only screen and (max-width: $lg-phone) {
+  body {
+    background-position-y: -270px;
+    background-color: #45913f;
+  }
+
+  .top {
+    min-height: 320px;
+
+    &::before {
+      top: -160px;
+    }
+
+    .wrapper {
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 36px;
+      line-height: 1;
+
+      small {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .absolute {
+    margin-bottom: var(--space-2);
+  }
+
+  .latinrogue {
+    min-width: 120px;
+    max-width: 155px;
+  }
+
+  .about {
+    h1 {
+      font-size: 36px;
+      line-height: 1;
+
+      small {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .services {
+    h1 {
+      font-size: 36px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+  }
+
+  .call {
+    align-items: center;
+
+    h2 {
+      font-size: 40px;
+    }
+  }
+
+  .bottom {
+    h1 {
+      font-size: 36px;
+
+      small {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $sm-phone) {
+  .logo {
+    width: 120px;
+  }
+
+  .nav-toggle {
+    width: 54px;
+    height: 54px;
+  }
+
+  .top p {
+    font-size: inherit;
+  }
+
+  .call {
+    &::before {
+      width: 45px;
+      height: 56px;
+      background-size: 45px 56px;
+    }
+
+    h2 {
+      font-size: 32px;
+
+      small {
+        font-size: 22px;
+      }
+    }
+  }
+}
