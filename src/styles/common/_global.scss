@@ -1,7 +1,8 @@
-@import "reset";
-@import "variables";
-@import "fonts";
-@import "flickity";
+
+
+@use "responsive" as responsive;
+@use "reset" as reset;
+@use "fonts" as fonts;
 
 @keyframes clouds {
   from {
@@ -680,6 +681,6 @@ header.main {
     display: block;
     background: url("https://s3.amazonaws.com/onepagelove/one-page-love-award-ribbon-right.svg") no-repeat;
   }
-}
 
-@import "responsive";
+
+}

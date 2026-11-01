@@ -1,13 +1,15 @@
-@import "variables";
+@use "variables" as vars;
 
-@media only screen and (min-width: 1920px) {
+
+
+@media only screen and (min-width: vars.$full-hd) {
   body {
     background-size: contain !important;
     background-position: 0 -15%;
   }
 }
 
-@media only screen and (max-width: $lg-tablet) {
+@media only screen and (max-width: vars.$lg-tablet) {
   .call {
     &::before {
       position: static;
@@ -16,13 +18,14 @@
   }
 }
 
-@media only screen and (max-width: $md-tablet) {
+@media only screen and (max-width: vars.$md-tablet) {
   .wrapper {
     width: 92%;
   }
 
   .top {
-    max-width: $sm-tablet;
+
+    max-width: vars.$sm-tablet;
     margin-left: auto;
     margin-right: auto;
 
@@ -46,7 +49,7 @@
   }
 
   .services {
-    max-width: $sm-tablet;
+    max-width: vars.$sm-tablet;
     margin-left: auto;
     margin-right: auto;
   }
@@ -81,161 +84,20 @@
   }
 }
 
-@media only screen and (max-width: $sm-tablet) {
-  body {
-    padding-top: calc(75px + var(--space-4));
-    background-position-y: -150px;
-  }
 
-  header.main {
-    margin: 0;
-    width: 100%;
-    padding: 0;
-    background: var(--baby-blue);
-    position: fixed;
-    top: 0;
-    transition: 0.3s all;
 
-    .wrapper {
-      flex-wrap: wrap;
-      margin: 0;
-      width: 100%;
-    }
-
-    nav {
-      width: 100%;
-      display: none;
-
-      .menu {
-        flex-direction: column;
-        padding-top: var(--space-1);
-        border-top: 1px solid var(--alpha-white);
-        width: 100%;
-
-        li {
-          margin: 0 0 var(--space-1);
-
-          > a {
-            padding: 0 4%;
-            display: block;
-          }
-        }
-      }
-    }
-  }
-
-  .scrolled-down {
-    header.main {
-      transform: translateY(-100%);
-    }
-  }
-
-  .menu-open {
-    header.main {
-      nav {
-        display: flex;
-      }
-    }
-  }
-
-  .logo {
-    width: 150px;
-    margin-left: 4%;
-  }
-
-  .nav-toggle {
-    display: flex;
-  }
-
-  .top {
-    min-height: 450px;
-  }
-
-  .latinrogue {
-    transform: none;
-    min-width: 250px;
-  }
-
-  .top-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .about {
-    .wrapper {
-      flex-wrap: wrap;
-    }
-
-    h1 {
-      font-size: 48px;
-      line-height: 0.83;
-
-      small {
-        font-size: 36px;
-        line-height: inherit;
-      }
-    }
-  }
-
-  .about-left {
-    justify-content: center;
-    margin-right: 0;
-    margin-bottom: var(--space-2);
-  }
-
-  .services {
-    h1 {
-      font-size: 66px;
-    }
-  }
-
-  .bottom {
-    .wrapper {
-      flex-direction: column;
-    }
-
-    h1 {
-      font-size: 66px;
-      text-align: center;
-      //line-height: .83;
-
-      small {
-        line-height: initial;
-      }
-    }
-  }
-
-  .quote-left {
-    margin-right: 0;
-    margin-bottom: var(--space-2);
-  }
-}
-
-@media only screen and (max-width: $lg-phone) {
+@media only screen and (max-width: vars.$lg-phone) {
   body {
     background-position-y: -270px;
     background-color: #45913f;
   }
 
-  .top {
-    min-height: 320px;
+  h1 {
+    font-size: 36px;
+    line-height: 1;
 
-    &::before {
-      top: -160px;
-    }
-
-    .wrapper {
-      flex-direction: column;
-    }
-
-    h1 {
-      font-size: 36px;
-      line-height: 1;
-
-      small {
-        font-size: 22px;
-      }
+    small {
+      font-size: 22px;
     }
   }
 
@@ -288,7 +150,8 @@
   }
 }
 
-@media only screen and (max-width: $sm-phone) {
+
+@media only screen and (max-width: vars.$sm-phone) {
   .logo {
     width: 120px;
   }

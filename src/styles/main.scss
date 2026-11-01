@@ -1,2 +1,3 @@
-@import "common/variables";
-@import "common/global";
+@use "common/responsive" as responsive;
+@use "common/variables" as vars;
+@use "common/global" as global;
