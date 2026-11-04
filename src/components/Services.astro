@@ -9,7 +9,7 @@ const { services, call, quotes } = home;
   <section class="wrapper">
     <article>
       <header>
-        <h1>{services.headline}</h1>
+        <h2>{services.headline}</h2>
       </header>
 
       <p>{services.text}</p>
@@ -31,10 +31,10 @@ const { services, call, quotes } = home;
     
     <div class="services-bottom">
       <a class="call" href={`tel:${call.number}`}>
-        <h2>
+        <h3>
           <small>{call.text}</small>
           {call.number}
-        </h2>
+        </h3>
       </a>
 
       <QuoteSlider client:load quotes={quotes} />

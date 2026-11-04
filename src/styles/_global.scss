@@ -74,7 +74,8 @@ h6 {
   color: var(--white);
 }
 
-h1 {
+h1, 
+h2 {
   line-height: 1;
   font-size: 24px;
   margin-bottom: var(--space-2);
@@ -304,7 +305,7 @@ header.main {
   margin-bottom: var(--space-5);
   overflow: auto;
 
-  h1 {
+  h2 {
     font-size: 78px;
     line-height: 60px;
     text-align: center;
@@ -374,7 +375,7 @@ header.main {
     }
   }
 
-  h1 {
+  h2 {
     font-size: 87px;
     text-align: center;
   }
@@ -431,7 +432,7 @@ header.main {
     top: -60px;
   }
 
-  h2 {
+  h3 {
     font-size: 68px;
     line-height: 1;
 
@@ -502,7 +503,7 @@ header.main {
     }
   }
 
-  h1 {
+  h2 {
     font-size: 87px;
     text-align: center;
     line-height: 1;
