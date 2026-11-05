@@ -1,14 +1,15 @@
 @use "variables" as vars;
+@use 'mixins';
 
-@media only screen and (min-width: vars.$full-hd) {
-  body {
+@include mixins.min(full-hd) {
+body {
     background-size: contain !important;
     background-position: 0 -15%;
   }
 }
 
-@media only screen and (max-width: vars.$lg-tablet) {
-  .call {
+@include mixins.max(lg-tablet) {
+.call {
     &::before {
       position: static;
       margin-right: var(--space-1);
@@ -16,7 +17,7 @@
   }
 }
 
-@media only screen and (max-width: vars.$md-tablet) {
+@include mixins.max(md-tablet) {
   .wrapper {
     width: 92%;
   }
@@ -81,7 +82,7 @@
   }
 }
 
-@media only screen and (max-width: vars.$lg-phone) {
+@include mixins.max(lg-phone) {
   body {
     background-position-y: -270px;
     background-color: #45913f;
@@ -145,8 +146,8 @@
   }
 }
 
-@media only screen and (max-width: vars.$sm-phone) {
-  .logo {
+@include mixins.max(sm-phone) {
+   .logo {
     width: 120px;
   }
 
