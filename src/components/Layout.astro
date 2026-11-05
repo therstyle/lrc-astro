@@ -57,19 +57,20 @@ const {
   </head>
   <body id="top" class="front-page">
     <Header />
+    <main>
+      <div class="wrap container" role="document">
+        <div class="content">
+          <div class="main">
+            <slot name="main" />
+          </div>
+        </div>
 
-    <div class="wrap container" role="document">
-      <div class="content">
-        <main class="main">
-          <slot name="main" />
-        </main>
+        <div class="bottom">
+          <div class="dirt">
+            <slot name="footer" />
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="bottom">
-      <div class="dirt">
-        <slot name="footer" />
-      </div>
-    </div>
+    </main>
   </body>
 </html>
