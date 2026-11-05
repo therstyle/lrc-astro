@@ -1,0 +1,178 @@
+.bottom {
+  width: 100%;
+  border-top: 1px solid #b67c27;
+  background: rgb(71, 23, 0);
+  background: -moz-linear-gradient(
+    top,
+    rgba(71, 23, 0, 1) 0%,
+    rgba(121, 72, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(71, 23, 0, 1) 0%,
+    rgba(121, 72, 0, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(71, 23, 0, 1) 0%,
+    rgba(121, 72, 0, 1) 100%
+  );
+  overflow: hidden;
+
+  .wrapper {
+    overflow: visible;
+  }
+
+  article {
+    p {
+      margin: 0 0 calc(var(--space-1) + var(--space-half)) 0;
+    }
+  }
+
+  h2 {
+    font-size: 87px;
+    text-align: center;
+    line-height: 1;
+
+    small {
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+      margin: 0 0 var(--space-2) 0;
+    }
+  }
+}
+
+.quote-left {
+  margin-right: var(--space-3);
+}
+
+.quote-right {
+  width: 100%;
+  max-width: 310px;
+  margin: auto;
+
+  .frm_fields_container {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: var(--space-1);
+      }
+    }
+  }
+
+  .frm_message,
+  .frm_error_style {
+    margin-bottom: var(--space-2);
+  }
+
+  .frm_form_fields {
+    .frm_error_style {
+      margin-bottom: var(--space-1);
+    }
+
+    .frm_error {
+      width: 100%;
+      color: #af3400;
+      font-size: 12px;
+      text-align: right;
+      margin-top: 4px;
+    }
+  }
+
+  label {
+    display: none;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #7c2500;
+    font-family: arial, sans-serif;
+    font-size: 18px;
+    color: #fff;
+    background: #4b2700;
+    display: block;
+    padding: 10px 15px;
+    clear: both;
+    outline: none;
+
+    &:not([type="submit"]) {
+      box-shadow: inset 0 0 32px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .state {
+    margin-right: var(--space-1);
+
+    input {
+      color: #ccc;
+    }
+  }
+
+  .zip,
+  .state {
+    width: calc(50% - (var(--space-1) / 2));
+  }
+
+  input[type="submit"] {
+    border: 1px solid #f1b977;
+    padding: 10px;
+    background: #f1b977;
+    background: -moz-linear-gradient(
+      top,
+      rgba(241, 185, 119, 1) 1%,
+      rgba(233, 147, 46, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(241, 185, 119, 1) 1%,
+      rgba(233, 147, 46, 1) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(241, 185, 119, 1) 1%,
+      rgba(233, 147, 46, 1) 100%
+    );
+    text-shadow: 1px 1px 0 #f5d19a;
+    color: #d63900;
+    text-transform: capitalize;
+    width: 100%;
+    display: block;
+  }
+
+  span {
+    color: #ccc;
+    font-size: 12px;
+    clear: both;
+  }
+
+  small {
+    font-size: 14px;
+    text-align: center;
+    display: block;
+  }
+}
+
+#frm_field_cptch_number_container {
+  input {
+    margin-bottom: var(--space-1) !important;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: var(--white);
+}
+
+:-moz-placeholder {
+  color: var(--white);
+}
+
+.hasPlaceholder {
+  color: var(--white);
+}

@@ -1,3 +1,5 @@
+@use "mixins";
+
 //Breakpoints
 $full-hd: 1920px;
 $desktop: 1200px;
@@ -39,15 +41,18 @@ $spacer: 16px;
   --space-7: calc(var(--space) * 7);
   --space-8: calc(var(--space) * 8);
 
-  @media only screen and (max-width: $md-tablet) {
+  //Sizes
+  --header-height: 80px;
+
+  @include mixins.max(md-tablet) {
     --max-width: 768px;
   }
 
-  @media only screen and (max-width: $lg-phone) {
+  @include mixins.max(lg-phone) {
     --space: 12px;
   }
 
-  @media only screen and (max-width: $sm-phone) {
+  @include mixins.max(sm-phone) {
     --font-size: 14px;
   }
 }
