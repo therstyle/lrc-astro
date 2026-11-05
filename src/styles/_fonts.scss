@@ -1,9 +1,10 @@
 @font-face {
   font-family: "Agenda-Bold";
   src: url("/fonts/agendabold.eot");
-  src: url("/fonts/agendabold.eot?#iefix") format("embedded-opentype"),
-       url("/fonts/agendabold.woff") format("woff"),
-       url("/fonts/agendabold.ttf") format("truetype");
+  src:
+    url("/fonts/agendabold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/agendabold.woff") format("woff"),
+    url("/fonts/agendabold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -11,9 +12,10 @@
 @font-face {
   font-family: "Agenda-Medium";
   src: url("/fonts/agendamedium.eot");
-  src: url("/fonts/agendamedium.eot?#iefix") format("embedded-opentype"),
-       url("/fonts/agendamedium.woff") format("woff"),
-       url("/fonts/agendamedium.ttf") format("truetype");
+  src:
+    url("/fonts/agendamedium.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/agendamedium.woff") format("woff"),
+    url("/fonts/agendamedium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

@@ -1,7 +1,5 @@
 @use "variables" as vars;
 
-
-
 @media only screen and (min-width: vars.$full-hd) {
   body {
     background-size: contain !important;
@@ -24,7 +22,6 @@
   }
 
   .top {
-
     max-width: vars.$sm-tablet;
     margin-left: auto;
     margin-right: auto;
@@ -83,8 +80,6 @@
     margin-bottom: var(--space-4);
   }
 }
-
-
 
 @media only screen and (max-width: vars.$lg-phone) {
   body {
@@ -149,7 +144,6 @@
     }
   }
 }
-
 
 @media only screen and (max-width: vars.$sm-phone) {
   .logo {

@@ -4,8 +4,6 @@
 @use "reset" as reset;
 @use "fonts" as fonts;
 
-
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height, 80px);
@@ -14,7 +12,6 @@ html {
 :root {
   --header-height: 80px;
 }
-
 
 @keyframes clouds {
   from {
@@ -74,7 +71,7 @@ h6 {
   color: var(--white);
 }
 
-h1, 
+h1,
 h2 {
   line-height: 1;
   font-size: 24px;
@@ -294,9 +291,27 @@ header.main {
 .bottom-grass {
   width: 100%;
   background: #46913f;
-  background: -moz-linear-gradient(top, #46913f 0%, #2c7027 35%, #2c7027 65%, #46913f 100%);
-  background: -webkit-linear-gradient(top, #46913f 0%, #2c7027 35%, #2c7027 65%, #46913f 100%);
-  background: linear-gradient(to bottom, #46913f 0%, #2c7027 35%, #2c7027 65%, #46913f 100%);
+  background: -moz-linear-gradient(
+    top,
+    #46913f 0%,
+    #2c7027 35%,
+    #2c7027 65%,
+    #46913f 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    #46913f 0%,
+    #2c7027 35%,
+    #2c7027 65%,
+    #46913f 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    #46913f 0%,
+    #2c7027 35%,
+    #2c7027 65%,
+    #46913f 100%
+  );
   border-bottom: 1px solid var(--black);
 }
 
@@ -349,9 +364,24 @@ header.main {
       width: 100%;
       height: 7px;
       filter: blur(2px);
-      background: -moz-linear-gradient(left, rgba(57, 145, 50, 0) 0%, rgba(57, 145, 50, 1) 50%, rgba(57, 145, 50, 0) 100%);
-      background: -webkit-linear-gradient(left, rgba(57, 145, 50, 0) 0%, rgba(57, 145, 50, 1) 50%, rgba(57, 145, 50, 0) 100%);
-      background: linear-gradient(to right, rgba(57, 145, 50, 0) 0%, rgba(57, 145, 50, 1) 50%, rgba(57, 145, 50, 0) 100%);
+      background: -moz-linear-gradient(
+        left,
+        rgba(57, 145, 50, 0) 0%,
+        rgba(57, 145, 50, 1) 50%,
+        rgba(57, 145, 50, 0) 100%
+      );
+      background: -webkit-linear-gradient(
+        left,
+        rgba(57, 145, 50, 0) 0%,
+        rgba(57, 145, 50, 1) 50%,
+        rgba(57, 145, 50, 0) 100%
+      );
+      background: linear-gradient(
+        to right,
+        rgba(57, 145, 50, 0) 0%,
+        rgba(57, 145, 50, 1) 50%,
+        rgba(57, 145, 50, 0) 100%
+      );
     }
 
     &::after {
@@ -365,9 +395,24 @@ header.main {
       opacity: 0.5;
       height: 11px;
       display: block;
-      background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-      background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-      background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+      background: -moz-linear-gradient(
+        left,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      background: -webkit-linear-gradient(
+        left,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0) 100%
+      );
     }
 
     > article {
@@ -488,9 +533,21 @@ header.main {
   width: 100%;
   border-top: 1px solid #b67c27;
   background: rgb(71, 23, 0);
-  background: -moz-linear-gradient(top, rgba(71, 23, 0, 1) 0%, rgba(121, 72, 0, 1) 100%);
-  background: -webkit-linear-gradient(top, rgba(71, 23, 0, 1) 0%, rgba(121, 72, 0, 1) 100%);
-  background: linear-gradient(to bottom, rgba(71, 23, 0, 1) 0%, rgba(121, 72, 0, 1) 100%);
+  background: -moz-linear-gradient(
+    top,
+    rgba(71, 23, 0, 1) 0%,
+    rgba(121, 72, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(71, 23, 0, 1) 0%,
+    rgba(121, 72, 0, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(71, 23, 0, 1) 0%,
+    rgba(121, 72, 0, 1) 100%
+  );
   overflow: hidden;
 
   .wrapper {
@@ -603,9 +660,21 @@ header.main {
     border: 1px solid #f1b977;
     padding: 10px;
     background: #f1b977;
-    background: -moz-linear-gradient(top, rgba(241, 185, 119, 1) 1%, rgba(233, 147, 46, 1) 100%);
-    background: -webkit-linear-gradient(top, rgba(241, 185, 119, 1) 1%, rgba(233, 147, 46, 1) 100%);
-    background: linear-gradient(to bottom, rgba(241, 185, 119, 1) 1%, rgba(233, 147, 46, 1) 100%);
+    background: -moz-linear-gradient(
+      top,
+      rgba(241, 185, 119, 1) 1%,
+      rgba(233, 147, 46, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(241, 185, 119, 1) 1%,
+      rgba(233, 147, 46, 1) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(241, 185, 119, 1) 1%,
+      rgba(233, 147, 46, 1) 100%
+    );
     text-shadow: 1px 1px 0 #f5d19a;
     color: #d63900;
     text-transform: capitalize;
@@ -692,8 +761,7 @@ header.main {
     height: 56px;
     text-indent: -9999px;
     display: block;
-    background: url("https://s3.amazonaws.com/onepagelove/one-page-love-award-ribbon-right.svg") no-repeat;
+    background: url("https://s3.amazonaws.com/onepagelove/one-page-love-award-ribbon-right.svg")
+      no-repeat;
   }
-
-
 }

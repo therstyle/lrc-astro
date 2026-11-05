@@ -131,7 +131,10 @@ const home: HomeData = {
     },
   ],
   contact: {
-    headline: { small: "You're Minutes Away from a free estimate!", main: 'free quote' },
+    headline: {
+      small: "You're Minutes Away from a free estimate!",
+      main: 'free quote',
+    },
     text: [
       'Please complete the following form and we will follow up with you within one business day. Or, feel free to call our office anytime!',
       'Prices may vary based on the size of your room, the type of floor and the service desired.',
