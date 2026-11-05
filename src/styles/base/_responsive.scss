@@ -1,6 +1,9 @@
 @use "variables" as vars;
 @use 'mixins';
 
+//TODO: update responsive - headings are all on level lower (except in intro)
+//TODO: update responsive - .logo CSS is different that original
+
 @include mixins.min(full-hd) {
 body {
     background-size: contain !important;
