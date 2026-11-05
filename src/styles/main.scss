@@ -1,3 +1,2 @@
-@use "responsive" as responsive;
-@use "variables" as vars;
-@use "global" as global;
+@use 'base/index' as base;
+@use 'sections/index' as sections;
