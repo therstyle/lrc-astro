@@ -7,8 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check",
-    "sync": "astro sync"
+    "check": "astro check"
   },
   "dependencies": {
     "@astrojs/svelte": "^7.0.0",

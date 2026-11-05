@@ -1,7 +1,6 @@
 ---
 import '../styles/main.scss';
 import '../styles/refinements.scss';
-import home from '../data/home';
 import Header from './Header.astro';
 
 interface Props {
@@ -42,7 +41,7 @@ const {
             '@id': `${new URL(Astro.url)}#organization`,
             name: 'Latin Rogue Cleaning Services',
             url: new URL(Astro.url).origin,
-            telephone: home.site.phone,
+            telephone: '(520) 256-4237',
           },
           {
             '@type': 'WebPage',

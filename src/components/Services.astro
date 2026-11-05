@@ -17,7 +17,7 @@ const { services, call, quotes } = home;
 
     <div class="all-services">
       {services.items.map((service) => (
-        <article class="service" key={service.icon}>
+        <article class="service">
           <header>
             <img src={service.icon} alt="" width="64" height="64" loading="lazy" />
             <h3>{service.headline}</h3>
