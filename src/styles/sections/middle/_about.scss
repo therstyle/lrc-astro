@@ -1,17 +1,35 @@
+@use '../../base/mixins';
+
 .about {
   width: 100%;
   margin-bottom: var(--space-5);
   overflow: auto;
+
+  .wrapper {
+    @include mixins.max(sm-tablet) {
+        flex-wrap: wrap;
+    }
+  }
 
   h2 {
     font-size: 78px;
     line-height: 60px;
     text-align: center;
 
+    @include mixins.max(sm-tablet) {
+        font-size: 48px;
+        line-height: .83;
+    }
+
     small {
       font-size: 52px;
       line-height: 42px;
       text-align: center;
+
+      @include mixins.max(sm-tablet) {
+        font-size: 36px;
+        line-height: inherit;
+      }
     }
   }
 }
@@ -24,4 +42,9 @@
   flex: 1;
   display: flex;
   align-items: center;
+
+  @include mixins.max(sm-tablet) {
+    justify-content: center;
+    margin-block-end: var(--space-2);
+  }
 }
