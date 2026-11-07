@@ -1,52 +1,6 @@
 @use "variables" as vars;
 @use "mixins";
 
-@include mixins.max(lg-tablet) {
-  .call {
-    &::before {
-      position: static;
-      margin-right: var(--space-1);
-    }
-  }
-}
-
-@include mixins.max(md-tablet) {
-  .services {
-    max-width: vars.$sm-tablet;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .all-services {
-    flex-wrap: wrap;
-
-    > .service:not(:last-child) {
-      margin-bottom: var(--space-2);
-    }
-  }
-
-  .service {
-    width: 100%;
-
-    header {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
-
-  .services-bottom {
-    flex-wrap: wrap;
-    max-width: 520px;
-    margin: auto;
-    justify-content: center;
-  }
-
-  .call {
-    transform: translateX(-25px);
-    margin-bottom: var(--space-4);
-  }
-}
-
 @include mixins.max(lg-phone) {
   .absolute {
     margin-bottom: var(--space-2);
