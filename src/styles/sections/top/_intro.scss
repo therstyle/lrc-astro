@@ -1,3 +1,5 @@
+@use "../../base/mixins";
+
 @keyframes clouds {
   from {
     background-position: 0 0;
@@ -12,6 +14,10 @@
   width: 100%;
   min-height: 550px;
   text-align: center;
+
+  @include mixins.max(md-tablet) {
+    padding-block-start: 75px;
+  }
 
   &::before {
     content: "";

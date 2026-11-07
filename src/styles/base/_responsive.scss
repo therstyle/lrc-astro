@@ -1,18 +1,15 @@
 @use "variables" as vars;
-@use 'mixins';
-
-//TODO: update responsive - headings are all on level lower (except in intro)
-//TODO: update responsive - .logo CSS is different that original
+@use "mixins";
 
 @include mixins.min(full-hd) {
-body {
+  body {
     background-size: contain !important;
     background-position: 0 -15%;
   }
 }
 
 @include mixins.max(lg-tablet) {
-.call {
+  .call {
     &::before {
       position: static;
       margin-right: var(--space-1);
@@ -150,10 +147,6 @@ body {
 }
 
 @include mixins.max(sm-phone) {
-   .logo {
-    width: 120px;
-  }
-
   .nav-toggle {
     width: 54px;
     height: 54px;

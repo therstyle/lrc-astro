@@ -41,23 +41,25 @@
 
 <header class="main">
   <div class="wrapper">
-    <a class="logo" href="#top">
-      <img src={logo} alt={siteName} width="150" height="50" decoding="async" />
-    </a>
+    <div class="header-top">
+      <a class="logo" href="#top">
+        <img src={logo} alt={siteName} width="150" height="50" decoding="async" />
+      </a>
 
-    <button
-      class="nav-toggle"
-      type="button"
-      aria-label="Toggle navigation menu"
-      aria-expanded={open}
-      onclick={toggleMenu}
-    >
-      <div class="icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </button>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded={open}
+        onclick={toggleMenu}
+      >
+        <div class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
 
     <nav class="menu-main-container">
       <ul id="menu-main" class="menu">

@@ -1,10 +1,26 @@
+@use "../base/mixins";
+
 header.main {
   margin-top: 24px;
   margin-bottom: var(--space-4);
   z-index: 100;
 
+  @include mixins.max(sm-tablet) {
+    background: var(--baby-blue);
+    position: sticky;
+    top: 0;
+    margin-block: 0;
+  }
+
   .wrapper {
-    align-items: center;
+    @include mixins.min(sm-tablet) {
+      align-items: center;
+    }
+
+    @include mixins.max(sm-tablet) {
+      width: 100%;
+      flex-direction: column;
+    }
   }
 
   .menu {
@@ -13,14 +29,39 @@ header.main {
     text-transform: lowercase;
     display: flex;
     justify-content: space-between;
+    gap: var(--space-2);
 
-    li {
-      margin-left: 30px;
+    @include mixins.max(sm-tablet) {
+      flex-direction: column;
+      gap: var(--space-1);
     }
 
     a {
       color: var(--white);
     }
+  }
+}
+
+.header-top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+
+  @include mixins.max(sm-tablet) {
+    padding-inline-start: 4%;
+  }
+}
+
+.logo {
+  width: 100%;
+  transition: 0.3s all;
+  display: block;
+
+  img {
+    width: min(var(--header-logo-max-width, 310px), 100%);
+    display: block;
   }
 }
 
@@ -33,6 +74,10 @@ header.main {
   justify-content: center;
   align-items: center;
   border-left: 1px solid var(--alpha-white);
+
+  @include mixins.max(sm-tablet) {
+    display: flex;
+  }
 
   &:hover {
     cursor: pointer;
@@ -68,6 +113,14 @@ header.main {
   }
 }
 
+.menu-main-container {
+  @include mixins.max(sm-tablet) {
+    display: none;
+    border-block-start: 1px solid var(--alpha-white);
+    padding: var(--space-1) 4%;
+  }
+}
+
 .menu-open {
   .nav-toggle {
     span {
@@ -91,15 +144,8 @@ header.main {
       }
     }
   }
-}
 
-.logo {
-  width: 100%;
-  transition: 0.3s all;
-  display: block;
-
-  img {
-    width: min(310px, 100%);
-    display: block;
+  .menu-main-container {
+    display: flex;
   }
 }

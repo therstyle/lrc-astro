@@ -48,11 +48,16 @@ $spacer: 16px;
     --max-width: 768px;
   }
 
+  @include mixins.max(sm-tablet) {
+    --header-logo-max-width: 150px;
+  }
+
   @include mixins.max(lg-phone) {
     --space: 12px;
   }
 
   @include mixins.max(sm-phone) {
+    --header-logo-max-width: 120px;
     --font-size: 14px;
   }
 }
