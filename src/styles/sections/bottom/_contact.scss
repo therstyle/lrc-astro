@@ -1,3 +1,5 @@
+@use '../../base/mixins';
+
 .bottom {
   width: 100%;
   border-top: 1px solid #b67c27;
@@ -21,6 +23,10 @@
 
   .wrapper {
     overflow: visible;
+
+    @include mixins.max(sm-tablet) {
+        flex-direction: column;
+    }
   }
 
   article {
@@ -34,6 +40,11 @@
     text-align: center;
     line-height: 1;
 
+    @include mixins.max(sm-tablet) {
+        font-size: 66px;
+        text-align: center;
+    }
+
     small {
       font-size: 24px;
       line-height: 36px;
@@ -44,7 +55,12 @@
 }
 
 .quote-left {
-  margin-right: var(--space-3);
+  margin-inline-end: var(--space-3);
+
+  @include mixins.max(sm-tablet) {
+    margin-inline-end: 0;
+    margin-block-end: var(--space-2);
+  }
 }
 
 .quote-right {
