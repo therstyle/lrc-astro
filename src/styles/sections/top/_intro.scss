@@ -40,17 +40,17 @@
     flex-direction: column;
 
     @include mixins.max(md-tablet) {
-        flex-direction: row;
+      flex-direction: row;
     }
 
     @include mixins.max(lg-phone) {
-        flex-direction: column;
+      flex-direction: column;
     }
   }
 
   .absolute {
     @include mixins.max(md-tablet) {
-        position: static;
+      position: static;
     }
   }
 
@@ -64,13 +64,13 @@
     line-height: 70px;
 
     @include mixins.max(md-tablet) {
-        font-size: 66px;
-        line-height: 0.83;
+      font-size: 66px;
+      line-height: 0.83;
     }
 
     @include mixins.max(lg-phone) {
-        font-size: 36px;
-        line-height: 1;
+      font-size: 36px;
+      line-height: 1;
     }
 
     small {
@@ -93,7 +93,7 @@
     margin: 0 0 var(--space-2) 0;
 
     @include mixins.max(sm-phone) {
-        font-size: inherit;
+      font-size: inherit;
     }
   }
 }

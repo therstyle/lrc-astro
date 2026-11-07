@@ -1,4 +1,4 @@
-@use '../../base/mixins';
+@use "../../base/mixins";
 
 .bottom {
   width: 100%;
@@ -25,7 +25,7 @@
     overflow: visible;
 
     @include mixins.max(sm-tablet) {
-        flex-direction: column;
+      flex-direction: column;
     }
   }
 
@@ -41,12 +41,12 @@
     line-height: 1;
 
     @include mixins.max(sm-tablet) {
-        font-size: 66px;
-        text-align: center;
+      font-size: 66px;
+      text-align: center;
     }
 
     @include mixins.max(lg-phone) {
-        font-size: 36px;
+      font-size: 36px;
     }
 
     small {
@@ -147,40 +147,40 @@
   input,
   button {
     &[type="submit"] {
-    font-family: arial, sans-serif;
-    font-size: 18px;
-    color: #d63900;
-    text-shadow: 1px 1px 0 #f5d19a;
-    text-transform: capitalize;
-    border-radius: 20px;
-    border: 1px solid #f1b977;
-    padding: 10px;
-    width: 100%;
-    display: block;
-    background: #f1b977;
-    background: -moz-linear-gradient(
-      top,
-      rgba(241, 185, 119, 1) 1%,
-      rgba(233, 147, 46, 1) 100%
-    );
-    background: -webkit-linear-gradient(
-      top,
-      rgba(241, 185, 119, 1) 1%,
-      rgba(233, 147, 46, 1) 100%
-    );
-    background: linear-gradient(
-      to bottom,
-      rgba(241, 185, 119, 1) 1%,
-      rgba(233, 147, 46, 1) 100%
-    );
-        &:disabled {
-            cursor: not-allowed;
-            opacity: 1;
-        }
+      font-family: arial, sans-serif;
+      font-size: 18px;
+      color: #d63900;
+      text-shadow: 1px 1px 0 #f5d19a;
+      text-transform: capitalize;
+      border-radius: 20px;
+      border: 1px solid #f1b977;
+      padding: 10px;
+      width: 100%;
+      display: block;
+      background: #f1b977;
+      background: -moz-linear-gradient(
+        top,
+        rgba(241, 185, 119, 1) 1%,
+        rgba(233, 147, 46, 1) 100%
+      );
+      background: -webkit-linear-gradient(
+        top,
+        rgba(241, 185, 119, 1) 1%,
+        rgba(233, 147, 46, 1) 100%
+      );
+      background: linear-gradient(
+        to bottom,
+        rgba(241, 185, 119, 1) 1%,
+        rgba(233, 147, 46, 1) 100%
+      );
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 1;
+      }
 
-        &:hover:not(:disabled) {
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.33);
-        }
+      &:hover:not(:disabled) {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.33);
+      }
     }
   }
 
