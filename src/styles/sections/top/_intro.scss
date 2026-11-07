@@ -91,6 +91,10 @@
   p {
     font-size: 18px;
     margin: 0 0 var(--space-2) 0;
+
+    @include mixins.max(sm-phone) {
+        font-size: inherit;
+    }
   }
 }
 

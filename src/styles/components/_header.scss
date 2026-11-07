@@ -123,6 +123,11 @@ header.main {
 
 .menu-open {
   .nav-toggle {
+    @include mixins.max(sm-phone) {
+        width: 54px;
+        height: 54px;
+    }
+
     span {
       &:nth-child(1) {
         transform: rotate(45deg);

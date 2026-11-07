@@ -188,6 +188,12 @@
         position: static;
         margin-right: var(--space-1);
     }
+
+    @include mixins.max(sm-phone) {
+        width: 45px;
+        height: 56px;
+        background-size: 45px 56px;
+    }
   }
 
   h3 {
@@ -198,12 +204,20 @@
         font-size: 40px;
     }
 
+    @include mixins.max(sm-phone) {
+        font-size: 32px;
+    }
+
     small {
       text-transform: none;
       display: block;
       font-family: var(--script);
       font-size: 34px;
       word-spacing: 0.35em;
+
+      @include mixins.max(sm-phone) {
+        font-size: 22px;
+      }
     }
   }
 }
