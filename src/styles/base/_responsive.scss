@@ -1,13 +1,6 @@
 @use "variables" as vars;
 @use "mixins";
 
-@include mixins.min(full-hd) {
-  body {
-    background-size: contain !important;
-    background-position: 0 -15%;
-  }
-}
-
 @include mixins.max(lg-tablet) {
   .call {
     &::before {
@@ -18,34 +11,6 @@
 }
 
 @include mixins.max(md-tablet) {
-  .wrapper {
-    width: 92%;
-  }
-
-  .top {
-    max-width: vars.$sm-tablet;
-    margin-left: auto;
-    margin-right: auto;
-
-    .wrapper {
-      flex-direction: row;
-    }
-
-    .absolute {
-      position: static;
-    }
-
-    h1 {
-      font-size: 66px;
-      line-height: 0.83;
-
-      small {
-        font-size: 36px;
-        line-height: inherit;
-      }
-    }
-  }
-
   .services {
     max-width: vars.$sm-tablet;
     margin-left: auto;
@@ -83,20 +48,6 @@
 }
 
 @include mixins.max(lg-phone) {
-  body {
-    background-position-y: -270px;
-    background-color: #45913f;
-  }
-
-  h1 {
-    font-size: 36px;
-    line-height: 1;
-
-    small {
-      font-size: 22px;
-    }
-  }
-
   .absolute {
     margin-bottom: var(--space-2);
   }

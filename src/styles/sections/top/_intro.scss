@@ -1,4 +1,5 @@
 @use "../../base/mixins";
+@use "../../base/variables" as vars;
 
 @keyframes clouds {
   from {
@@ -12,11 +13,13 @@
 
 .top {
   width: 100%;
-  min-height: 550px;
+  min-height: var(--intro-top-height, 550px);
   text-align: center;
 
   @include mixins.max(md-tablet) {
     padding-block-start: 75px;
+    max-width: vars.$sm-tablet;
+    margin-inline: auto;
   }
 
   &::before {
@@ -35,6 +38,20 @@
 
   .wrapper {
     flex-direction: column;
+
+    @include mixins.max(md-tablet) {
+        flex-direction: row;
+    }
+
+    @include mixins.max(lg-phone) {
+        flex-direction: column;
+    }
+  }
+
+  .absolute {
+    @include mixins.max(md-tablet) {
+        position: static;
+    }
   }
 
   header {
@@ -46,9 +63,28 @@
     font-size: 97px;
     line-height: 70px;
 
+    @include mixins.max(md-tablet) {
+        font-size: 66px;
+        line-height: 0.83;
+    }
+
+    @include mixins.max(lg-phone) {
+        font-size: 36px;
+        line-height: 1;
+    }
+
     small {
       font-size: 52px;
       line-height: 42px;
+
+      @include mixins.max(md-tablet) {
+        font-size: 36px;
+        line-height: inherit;
+      }
+
+      @include mixins.max(lg-phone) {
+        font-size: 22px;
+      }
     }
   }
 
