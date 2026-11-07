@@ -21,6 +21,11 @@
         line-height: .83;
     }
 
+    @include mixins.max(lg-phone) {
+        font-size: 36px;
+        line-height: 1;
+    }
+
     small {
       font-size: 52px;
       line-height: 42px;
@@ -29,6 +34,10 @@
       @include mixins.max(sm-tablet) {
         font-size: 36px;
         line-height: inherit;
+      }
+
+      @include mixins.max(lg-phone) {
+        font-size: 22px;
       }
     }
   }

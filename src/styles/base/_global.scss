@@ -105,6 +105,10 @@ img {
 
 .absolute {
   position: absolute;
+
+  @include mixins.max(lg-phone) {
+    margin-bottom: var(--space-2);
+  }
 }
 
 .sig {

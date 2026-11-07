@@ -1,56 +1,6 @@
 @use "variables" as vars;
 @use "mixins";
 
-@include mixins.max(lg-phone) {
-  .absolute {
-    margin-bottom: var(--space-2);
-  }
-
-  .latinrogue {
-    min-width: 120px;
-    max-width: 155px;
-  }
-
-  .about {
-    h2 {
-      font-size: 36px;
-      line-height: 1;
-
-      small {
-        font-size: 22px;
-      }
-    }
-  }
-
-  .services {
-    h2 {
-      font-size: 36px;
-    }
-
-    h3 {
-      font-size: 24px;
-    }
-  }
-
-  .call {
-    align-items: center;
-
-    h3 {
-      font-size: 40px;
-    }
-  }
-
-  .bottom {
-    h2 {
-      font-size: 36px;
-
-      small {
-        font-size: 22px;
-      }
-    }
-  }
-}
-
 @include mixins.max(sm-phone) {
   .nav-toggle {
     width: 54px;

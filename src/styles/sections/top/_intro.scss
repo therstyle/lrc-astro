@@ -99,4 +99,9 @@
   min-width: 320px;
   max-width: 320px;
   width: 100%;
+
+  @include mixins.max(lg-phone) {
+    min-width: 120px;
+    max-width: 155px;
+  }
 }

@@ -91,6 +91,16 @@
     @include mixins.max(sm-tablet) {
         font-size: 66px;
     }
+
+    @include mixins.max(lg-phone) {
+        font-size: 36px;
+    }
+  }
+
+  h3 {
+    @include mixins.max(lg-phone) {
+        font-size: 24px;
+    }
   }
 }
 
@@ -160,6 +170,10 @@
     margin-bottom: var(--space-4);
   }
 
+  @include mixins.max(lg-phone) {
+    align-items: center;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -179,6 +193,10 @@
   h3 {
     font-size: 68px;
     line-height: 1;
+
+    @include mixins.max(lg-phone) {
+        font-size: 40px;
+    }
 
     small {
       text-transform: none;
