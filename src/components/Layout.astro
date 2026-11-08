@@ -5,11 +5,13 @@ import Header from './Header.astro';
 interface Props {
   title?: string;
   description?: string;
+  showBottom?: boolean;
 }
 
 const {
   title = 'Latin Rogue Cleaning',
   description = 'Latin Rogue Cleaning — professional home cleaning service. Get a free quote today.',
+  showBottom = true,
 } = Astro.props;
 ---
 
@@ -63,11 +65,13 @@ const {
           </div>
         </div>
 
-        <div class="bottom">
-          <div class="dirt">
-            <slot name="footer" />
+        {showBottom && (
+          <div class="bottom">
+            <div class="dirt">
+              <slot name="footer" />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </main>
   </body>
