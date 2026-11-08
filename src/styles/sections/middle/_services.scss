@@ -85,21 +85,21 @@
   }
 
   h2 {
-    font-size: 87px;
+    font-size: 5.4375rem;
     text-align: center;
 
     @include mixins.max(sm-tablet) {
-      font-size: 66px;
+      font-size: 4.125rem;
     }
 
     @include mixins.max(lg-phone) {
-      font-size: 36px;
+      font-size: 2.25rem;
     }
   }
 
   h3 {
     @include mixins.max(lg-phone) {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
   }
 }
@@ -141,7 +141,7 @@
   }
 
   h3 {
-    font-size: 41px;
+    font-size: 2.5625rem;
   }
 
   p {
@@ -197,26 +197,26 @@
   }
 
   h3 {
-    font-size: 68px;
+    font-size: 4.25rem;
     line-height: 1;
 
     @include mixins.max(lg-phone) {
-      font-size: 40px;
+      font-size: 2.5rem;
     }
 
     @include mixins.max(sm-phone) {
-      font-size: 32px;
+      font-size: 2rem;
     }
 
     small {
       text-transform: none;
       display: block;
       font-family: var(--script);
-      font-size: 34px;
+      font-size: 2.125rem;
       word-spacing: 0.35em;
 
       @include mixins.max(sm-phone) {
-        font-size: 22px;
+        font-size: 1.375rem;
       }
     }
   }

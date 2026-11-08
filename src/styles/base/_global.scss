@@ -64,7 +64,7 @@ h6 {
 h1,
 h2 {
   line-height: 1;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: var(--space-2);
 
   small {
@@ -77,15 +77,15 @@ h2 {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 h4 {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 img {
@@ -117,7 +117,7 @@ img {
 .sig {
   color: #fff;
   font-style: italic;
-  font-size: 10px;
+  font-size: 0.625rem;
   width: 100%;
   max-width: 140px;
   background: #563000;

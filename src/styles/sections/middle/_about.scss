@@ -12,32 +12,32 @@
   }
 
   h2 {
-    font-size: 78px;
+    font-size: 4.875rem;
     line-height: 60px;
     text-align: center;
 
     @include mixins.max(sm-tablet) {
-      font-size: 48px;
+      font-size: 3rem;
       line-height: 0.83;
     }
 
     @include mixins.max(lg-phone) {
-      font-size: 36px;
+      font-size: 2.25rem;
       line-height: 1;
     }
 
     small {
-      font-size: 52px;
+      font-size: 3.25rem;
       line-height: 42px;
       text-align: center;
 
       @include mixins.max(sm-tablet) {
-        font-size: 36px;
+        font-size: 2.25rem;
         line-height: inherit;
       }
 
       @include mixins.max(lg-phone) {
-        font-size: 22px;
+        font-size: 1.375rem;
       }
     }
   }
