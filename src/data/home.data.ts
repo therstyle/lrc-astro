@@ -45,7 +45,10 @@ export interface HomeProps {
     text: string;
   };
   about: {
-    image: string;
+    image: {
+      path: string;
+      alt?: string;
+    }
     headline: Headline;
     text: string[];
   };
@@ -84,7 +87,10 @@ const home: HomeProps = {
     text: 'Contact Latin Rogue Cleaning today and have your home cleaned just the way you want it.',
   },
   about: {
-    image: '/images/4pan.png',
+    image: {
+      path: '/images/4pan.png',
+      alt: 'Latin Rogue Cleaning" width="256" height="256'
+    },
     headline: { small: 'Why Latin Rogue', main: 'Is A Clean Sweep' },
     text: [
       "In today's busy world, families, couples, and singles turn to Latin Rogue Cleaning to keep their lives and their homes in order. Latin Rogue is more than just another cleaning service, spend your time the way you want and let the professionals do the cleaning!",
