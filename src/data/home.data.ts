@@ -32,7 +32,7 @@ export interface NavItem {
   href: string;
 }
 
-export interface HomeData {
+export interface HomeProps {
   site: {
     name: string;
     logo: string;
@@ -67,7 +67,7 @@ export interface HomeData {
   };
 }
 
-const home: HomeData = {
+const home: HomeProps = {
   site: {
     name: 'Latin Rogue Cleaning',
     logo: '/images/logo.svg',
